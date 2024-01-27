@@ -21,29 +21,46 @@
             specifically density (ρ) and viscosity (μ). These fluids adhere to the principles of the
             Navier-Stokes equations.This model can be expressed through the following
             formulation:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            \frac{\partial u_{1}}{\partial t}+ (u_{1}.\nabla) u_{1}= -\frac{1}{\rho_{1}}\nabla p_{1}+ \frac{1}{\rho_{1}}\nabla . \mu_{1}(\nabla u_{1}+\nabla u_{1}^{T} )+ F_{s1}
+           $$</p>
+        <p>$$
+            \frac{\partial u_{2}}{\partial t}+ (u_{2}.\nabla) u_{2}= -\frac{1}{\rho_{2}}\nabla p_{2}+ \frac{1}{\rho_{2}}\nabla . \mu_{2}(\nabla u_{2}+\nabla u_{2}^{T} )+ F_{s2}
+           $$</p>
         <!-- <p>Et une en ligne: \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</p> -->
         
         <p>A single momentum equation can be formulated using the new variables ρ and μ to
             represent and solve a unified problem:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            \frac{\partial u}{\partial t}+(\mathbf{u} \cdot \nabla) u = -\frac{1}{\rho}\nabla p + \frac{1}{\rho}\nabla \cdot \mu( \nabla \mathbf{u} + \nabla \mathbf{u}^T) + F_s
+            $$</p>
         <p>In this model, (ρ, μ) are functions that vary depending on the fluid. Specifically, they
             equal (ρ₁, μ₁) in the first fluid and (ρ₂, μ₂) in the second. To accurately represent the
             interface Γ between these two fluids, the boundary is defined as the zero level of a
             function φ, known as the LevelSet, where:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            \Gamma = \{x \,|\, \phi(x, t) = 0\}
+           $$</p>
         <p>The LevelSet is dynamically updated at each step of the computation by solving the
             subsequent Transport equation:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$ 
+            \dfrac{\partial \phi}{\partial t} + \mathbf{u} \cdot \nabla \phi = 0
+           $$</p>
         <p>Initially, the LevelSet is chosen to be the signed distance function relative to the
             interface:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            \phi(x, t = 0) = \pm d
+           $$</p>
         <p>Subsequently, the values of ρ and μ are reconstructed from the LevelSet after being
             updated using the following method:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            \rho = \rho_1 + (\rho_2 - \rho_1)F(\phi) 
+           $$</p>
+        <p>$$
+            \mu = \mu_1 + (\mu_2 - \mu_1)F(\phi)
+           $$</p>
     </section>
+    
     <footer>
         <p>&copy; 2024 Projet Modélisation Numérique</p>
     </footer>

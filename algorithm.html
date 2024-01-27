@@ -14,6 +14,7 @@
             <li><a href="environment.html">Environment</a></li>
             <li><a href="equations.html">Equations</a></li>
             <li><a href="algorithm.html">Algorithm</a></li>
+            <li><a href="conclusion.html">conclusion</a></li>
         </ul>
     </nav>
     <section>
@@ -24,19 +25,26 @@
         <h1>Prediction Step:</h1>
         <p>The method begins by solving the prediction equation to find the value of the
             intermediate velocity u*, which is defined as follows:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-        <!-- <p>Et une en ligne: \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</p> -->
+        <p> $$
+            \dfrac{u^{*}-u^{n}}{\Delta t}+ (u \cdot \nabla u)^{*}= -\nabla p^{*} + \dfrac{1}{Re}\Delta u^{*}.
+            $$</p>
         
-        <h1>Poisson Squation:</h1>
+        <h1>Poisson Equation:</h1>
         <p>Having determined the value of u*, the value of ψ is then computed using the
             Poisson equation, which can be expressed in the following form:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            -\nabla u^{*}=  \Delta (p^{*} -p^{n+1})= \Delta \psi.
+           $$</p>
         
         <h1>Correction Step:</h1>
         <p>The velocity value uⁿ⁺¹ at time tⁿ⁺¹ is ultimately derived from the correction equation
             as follows:</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
-        <p>Voici une équation centrée: $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+        <p>$$
+            p^{n+1}=p^{*}+ \dfrac{\rho}{\Delta t} \psi,
+           $$</p>
+        <p>$$
+            u^{n+1}=u^{*}+ \nabla \psi.
+           $$</p>
         
     </section>
     <footer>
