@@ -4,8 +4,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
     <title>Contexte - Modélisation Numérique</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="context-background">
     <nav>
         <h1>Algorithm of the prediction-correction method</h1>
         <ul>
@@ -19,6 +22,7 @@
         </ul>
     </nav>
     <section>
+        <div class="text-container">
         <p>Temporally discretized version of Navier-Stokes equation can be written in the following form: </p>
         <p>$$
             \dfrac{u^{n+1}-u^{n}}{\Delta t}+ (u \cdot \nabla u)^{n+1} = -\nabla p^{n+1} + \dfrac{1}{Re}\Delta u^{n+1}, \quad \quad     (1)
@@ -56,7 +60,7 @@
             u^{n+1}=u^{*}+ \nabla \psi.
            $$</p>
         <p>Through iterative application of these steps, the fluid's velocity and pressure fields are advanced in time, providing a numerical approximation to the Navier-Stokes equations.</p>
-        
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Projet Modélisation Numérique</p>

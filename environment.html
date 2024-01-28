@@ -4,8 +4,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
     <title>Contexte - Modélisation Numérique</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="context-background">
     <nav>
         <h1>Environment</h1>
         <ul>
@@ -19,13 +22,15 @@
         </ul>
     </nav>
     <section>
+        <div class="text-container">
         <h2>The NEOS Library</h2>
         <p> This following work is based on NEOS, a C++ coded library developed by the Inria
             MEMPHIS team. NEOS is designed with various differential operators discretized by
             finite volumes on quadtree meshes in 2D (and octrees in 3D). Additionally, NEOS is
-            capable of massively parallel computing using MPI.
-        </p>
+            capable of massively parallel computing using MPI.</p>
+        </div>
 
+        <div class="text-container">
         <h2>The Quadtree Meshes</h2>
         <p> The quadtree is a highly efficient structure that operates on the principle of recursive
             spatial subdivision, which involves breaking down a space into smaller, more
@@ -34,9 +39,10 @@
             regions, allowing for more detailed analysis and efficient data retrieval. One of the
             key properties of a quadtree is its spatial indexing capability, which, combined with its
             adaptability to various scales of spatial data, makes it an invaluable tool in areas
-            such as geographic information systems, image processing, and computer graphics.
-        </p>
+            such as geographic information systems, image processing, and computer graphics.</p>
+        </div>
         
+        <div class="text-container">
         <h2>Advantages of Quadtree Meshes</h2>
         <p> Quadtrees are exceptionally useful in simulations due to their ability to provide
             adaptive mesh refinement. This feature allows for increased detail in specific regions
@@ -46,8 +52,8 @@
             making these structures highly effective. Furthermore, they excel in representing
             complex 2D and 3D geometries, which is essential for accurately modeling physical
             spaces in simulations, thereby ensuring a high level of precision and reliability in the
-            simulated environment.
-        </p>
+            simulated environment.</p>
+        </div>
 
     </section>
     <footer>
