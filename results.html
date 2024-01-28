@@ -28,20 +28,18 @@
 
 
         <h1>Poisson Equation:</h1>
-        <p>In order to validate the Poisson equation with a variable coefficient:</p>
-        <p> $$
-            \nabla (\alpha (x,y)\nabla u)= 0.
-            $$</p>
-
-        <p>we retained as an exact solution:</p>
-        <p> $$
-            u(x, y)= x^{2}+ 2x.
-            $$</p>
-        <p>By developing and replaacing $$u$$ we find :</p>
-        <p> $$
-            \alpha (x) = \dfrac{1}{x+1}.
-            $$</p>
-        <p>We can find a relative $$L1$$ error of $$10^{-12}$$ between our numerical solution and the predefined exact solution. This means that our model clearly converged.</p>
+        <p>
+            In order to validate the Poisson equation with a variable coefficient
+            $ \nabla (\alpha (x,y)\nabla u)= 0 $,
+            we retained as an exact solution
+            $ u(x, y)= x^{2}+ 2x $.
+            By developing and replacing $ u $ we find:
+            $ \alpha (x) = \dfrac{1}{x+1} $.
+            We can find a relative $ L1 $ error of $ 10^{-12} $
+            between our numerical solution and the predefined exact solution. This means that our model clearly converged.
+        </p>
+        
+        
         <div class="image2">
             <img src="./img/poisson.png" alt="./img/poisson.png">
         </div>

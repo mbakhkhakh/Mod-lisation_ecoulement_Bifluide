@@ -19,33 +19,43 @@
         </ul>
     </nav>
     <section>
-        <p>The approach used to solve the Navier-Stokes equation and determine the velocity
-            value at the next time step, tⁿ⁺¹, involves utilizing the prediction-correction method.
-            This method is composed of the following parts:</p>
+        <p>Temporally discretized version of Navier-Stokes equation can be written in the following form: </p>
+        <p>$$
+            \dfrac{u^{n+1}-u^{n}}{\Delta t}+ (u \cdot \nabla u)^{n+1} = -\nabla p^{n+1} + \dfrac{1}{Re}\Delta u^{n+1}, \quad \quad     (1)
+            $$</p>
+        <p>$$
+            \nabla u^{n+1}=0. \quad \quad   (2)
+            $$</p>
+        <p>Spatially discretized versions of the coupled equations (1) and (2) are difficult to solve
+            directly. Therefore, a fractional step procedure can be used to approximate the solution of
+            the coupled system by first solving an analog to equation (1) for an intermediate quantity u*, and then projecting this quantity onto the space
+            of divergence-free fields to yield uⁿ⁺¹. In general, this procedure is given by:
+            </p>
 
         <h1>Prediction Step:</h1>
-        <p>The method begins by solving the prediction equation to find the value of the
-            intermediate velocity u*, which is defined as follows:</p>
+        <p>The solution process begins with a prediction step. An intermediate velocity field, denoted 
+            u*, is estimated by solving a modified version of the momentum equation defined as follows:</p>
         <p> $$
             \dfrac{u^{*}-u^{n}}{\Delta t}+ (u \cdot \nabla u)^{*}= -\nabla p^{*} + \dfrac{1}{Re}\Delta u^{*}.
             $$</p>
         
         <h1>Poisson Equation:</h1>
-        <p>Having determined the value of u*, the value of ψ is then computed using the
-            Poisson equation, which can be expressed in the following form:</p>
+        <p>Following the prediction step, the Poisson equation is employed to compute the pressure field. This equation serves to reconcile 
+            the intermediate velocity with the incompressibility condition by introducing a pressure correction term. We define ψ as a pressure correction function, where ψ = p* -pⁿ⁺¹. 
+            The Poisson equation can then be expressed in the following form:</p>
         <p>$$
-            -\nabla u^{*}=  \Delta (p^{*} -p^{n+1})= \Delta \psi.
+            \dfrac{-\nabla u^{*}}{\Delta t}=  \Delta (p^{*} -p^{n+1})= \Delta \psi.
            $$</p>
         
         <h1>Correction Step:</h1>
-        <p>The velocity value uⁿ⁺¹ at time tⁿ⁺¹ is ultimately derived from the correction equation
-            as follows:</p>
-        <p>$$
-            p^{n+1}=p^{*}+ \dfrac{\rho}{\Delta t} \psi,
-           $$</p>
+        <p>After updating the pression value pⁿ⁺¹= p* - ψ, the final step involves adjusting the intermediate velocity field
+            with the pressure correction to obtain the velocity uⁿ⁺¹ at the next time step,
+            thus ensuring both the momentum and continuity equations are satisfied: </p>
+           
         <p>$$
             u^{n+1}=u^{*}+ \nabla \psi.
            $$</p>
+        <p>Through iterative application of these steps, the fluid's velocity and pressure fields are advanced in time, providing a numerical approximation to the Navier-Stokes equations.</p>
         
     </section>
     <footer>
