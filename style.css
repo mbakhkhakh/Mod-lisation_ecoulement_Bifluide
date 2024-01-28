@@ -45,6 +45,8 @@ nav ul li a {
     text-decoration: none;
     font-size: 22px;
     /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Roboto', serif;
+    font-weight: bold;
     color: black;
 }
 
@@ -75,14 +77,31 @@ section p {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     
     
-    border: 2px solid rgb(105, 122, 231);
+    /* border: 2px solid rgb(105, 122, 231); */
 }
 
 .image1 img{
-    width: 900px;
+    width: 400px;
+    padding: 200px;
+    
+}
+
+.image2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    
+    
+    /* border: 2px solid rgb(105, 122, 231); */
+}
+
+.image2 img{
+    width: 30%;
+    padding: 10px;
 }
 
 .label{
@@ -98,7 +117,8 @@ section p {
 }
 .title h1 {
     font-size: 50px;
-    font-family: 'Libre Baskerville', serif;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Roboto', serif;
 }
 
 .profils{
@@ -127,7 +147,8 @@ section p {
 }
 
 .profiles h4{
-    font-family: 'Libre Baskerville', serif;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Roboto', serif;
 }
 
 .profile-board{
@@ -135,3 +156,4 @@ section p {
     flex-direction: column;
     align-items: center;
 }
+
