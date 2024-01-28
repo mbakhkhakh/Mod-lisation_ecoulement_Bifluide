@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
     <title>Contexte - Modélisation Numérique</title>
@@ -7,7 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Other head elements -->
+
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        // Other configurations...
+      };
+    </script>
+
+    <!-- Load MathJax Library -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
 </head>
+
 <body class="context-background">
     <nav>
         <h1>Environment</h1>
@@ -40,6 +57,13 @@
             key properties of a quadtree is its spatial indexing capability, which, combined with its
             adaptability to various scales of spatial data, makes it an invaluable tool in areas
             such as geographic information systems, image processing, and computer graphics.</p>
+            <div class="image3">
+                <img src="./img/intro_quadtree.png" alt="Description de l'image">
+                <img src="./img/bitpit_logo.png" alt="Description de l'image">
+            </div>
+            <p> $\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad 
+                \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad$ 
+                Figure 2: Visual representation of a quadtree structure in spatial data partitioning.</p>
         </div>
         
         <div class="text-container">
@@ -53,11 +77,17 @@
             complex 2D and 3D geometries, which is essential for accurately modeling physical
             spaces in simulations, thereby ensuring a high level of precision and reliability in the
             simulated environment.</p>
+            <div class="image3">
+                <img src="./img/Control-volume-in-a-quadtree-mesh-based-on-non-staggered-grid.png" alt="Description de l'image">
+            </div>
+            <p> $\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  \quad \quad
+                \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad  \quad \quad$ 
+                Figure 3: Quadtree spatial indexing structure for efficient data retrieval.</p>
         </div>
 
     </section>
     <footer>
-        <p>&copy; 2024 Projet Modélisation Numérique</p>
+        <p>&copy; 2024 CHP Project</p>
     </footer>
 </body>
 </html>

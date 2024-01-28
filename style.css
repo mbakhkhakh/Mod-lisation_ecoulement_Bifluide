@@ -106,6 +106,21 @@ section p {
     padding: 10px;
 }
 
+.image3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    
+    
+    /* border: 2px solid rgb(105, 122, 231); */
+}
+
+.image3 img{
+    width: 350px;
+    padding: 50px;
+}
+
 .label{
     display: flex;
     align-items: center;
